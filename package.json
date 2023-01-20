@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "serve": "nx run-many --target=serve --frontend",
-    "storybook": "nx storybook ui"
+    "storybook": "nx storybook ui",
+    "build": "nx run-many --target=build --projects=frontend"
   },
   "private": true,
   "dependencies": {
