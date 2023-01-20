@@ -1,7 +1,7 @@
 {
-  "name": "nx-nextjs-blogpost",
+  "name": "frontend",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/nx-nextjs-blogpost",
+  "sourceRoot": "packages/frontend",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,12 +9,12 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/nx-nextjs-blogpost",
-        "outputPath": "dist/apps/nx-nextjs-blogpost"
+        "root": "packages/frontend",
+        "outputPath": "dist/packages/frontend"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/nx-nextjs-blogpost"
+          "outputPath": "packages/frontend"
         },
         "production": {}
       }
@@ -23,16 +23,18 @@
       "executor": "@nrwl/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "nx-nextjs-blogpost:build",
-        "dev": true
+        "buildTarget": "frontend:build",
+        "dev": true,
+        "port": 3000
       },
       "configurations": {
         "development": {
-          "buildTarget": "nx-nextjs-blogpost:build:development",
-          "dev": true
+          "buildTarget": "frontend:build:development",
+          "dev": true,
+          "port": 3000
         },
         "production": {
-          "buildTarget": "nx-nextjs-blogpost:build:production",
+          "buildTarget": "frontend:build:production",
           "dev": false
         }
       }
@@ -40,14 +42,14 @@
     "export": {
       "executor": "@nrwl/next:export",
       "options": {
-        "buildTarget": "nx-nextjs-blogpost:build:production"
+        "buildTarget": "frontend:build:production"
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/nx-nextjs-blogpost/jest.config.ts",
+        "jestConfig": "packages/frontend/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -55,7 +57,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/nx-nextjs-blogpost/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["packages/frontend/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
