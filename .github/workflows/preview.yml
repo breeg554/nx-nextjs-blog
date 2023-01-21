@@ -7,8 +7,13 @@ on:
     branches:
       - main
 jobs:
-  Deploy-Production:
+  compile-and-test:
+    name: Compile and test
+    uses: breeg554/nx-nextjs-blogpost/.github/workflows/
+  deploy-Production:
     runs-on: ubuntu-latest
+    needs:
+      - compile-and-test
     steps:
       - uses: actions/checkout@v2
       - name: Install Vercel CLI

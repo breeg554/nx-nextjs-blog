@@ -1,0 +1,15 @@
+name: CI
+on:
+  pull_request:
+    types: [ opened, synchronize, reopened ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run ci:lint
+      - run: pnpm run ci:compile
+      - run: pnpm run ci:test

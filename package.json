@@ -6,7 +6,11 @@
     "serve": "nx run-many --target=serve --frontend",
     "storybook": "nx storybook ui",
     "build": "nx run-many --target=build --projects=frontend",
-    "test": "nx affected --target=test"
+    "test": "nx affected --target=test",
+    "lint": "nx affected --target=lint",
+    "ci:lint": "npm run lint",
+    "ci:test": "npm run test",
+    "ci:compile": "npm run compile"
   },
   "private": true,
   "dependencies": {
