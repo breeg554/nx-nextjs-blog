@@ -1,7 +1,7 @@
-const {createGlobPatternsForDependencies} = require('@nrwl/react/tailwind');
-const merge = require('lodash.merge')
-const {join} = require('path');
-const baseConfig = require('../../.taiwlind/tailwind.config')
+const { createGlobPatternsForDependencies } = require('@nrwl/react/tailwind');
+const merge = require('lodash.merge');
+const { join } = require('path');
+const baseConfig = require('../../.taiwlind/tailwind.config');
 
 module.exports = merge(baseConfig, {
   content: [
@@ -12,4 +12,4 @@ module.exports = merge(baseConfig, {
     extend: {},
   },
   plugins: [],
-})
+});

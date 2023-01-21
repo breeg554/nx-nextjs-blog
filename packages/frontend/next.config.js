@@ -1,4 +1,4 @@
-const {withNx} = require('@nrwl/next/plugins/with-nx');
+const { withNx } = require('@nrwl/next/plugins/with-nx');
 
 const nextConfig = {
   transpilePackages: ['@blog/ui'],

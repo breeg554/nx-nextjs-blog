@@ -8,7 +8,6 @@ on:
       VERCEL_TOKEN:
         required: true
 
-
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
