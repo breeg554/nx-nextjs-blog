@@ -9,7 +9,7 @@ on:
 jobs:
   compile-and-test:
     name: Compile and test
-    uses: breeg554/nx-nextjs-blogpost/.github/workflows/
+    uses: breeg554/nx-nextjs-blogpost/.github/workflows/compile-and-test.yml@main
   deploy-Production:
     runs-on: ubuntu-latest
     needs:
