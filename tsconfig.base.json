@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@blog/http-client": ["packages/http-client/src/index.ts"],
       "@blog/ui": ["packages/ui/src/index.ts"]
     }
   },

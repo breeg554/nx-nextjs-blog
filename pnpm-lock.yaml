@@ -30,6 +30,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.36.1
   '@typescript-eslint/parser': ^5.36.1
   autoprefixer: ^10.4.13
+  axios: ^1.2.3
   babel-jest: 28.1.1
   babel-loader: 8.1.0
   eslint: ~8.15.0
@@ -62,6 +63,7 @@ specifiers:
 
 dependencies:
   '@nrwl/next': 15.5.2_pxpxsspwa6cw2l2ifj4en6523a
+  axios: 1.2.3
   lodash.merge: 4.6.2
   next: 13.1.1_a7mipu7kvrstgwvi56qu2qyzhe
   next-themes: 0.2.1_q76c2b4vyoegvsbrcwkfvimnai
