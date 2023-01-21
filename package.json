@@ -8,9 +8,10 @@
     "build": "nx run-many --target=build --projects=frontend",
     "test": "nx affected --target=test",
     "lint": "nx affected --target=lint",
-    "ci:lint": "npm run lint",
-    "ci:test": "npm run test",
-    "ci:compile": "npm run compile"
+    "compile": "nx affected --target=tsc",
+    "ci:lint": "npm run lint -- --parallel=3",
+    "ci:test": "npm run test -- --parallel=3",
+    "ci:compile": "npm run compile -- --parallel=3"
   },
   "private": true,
   "dependencies": {

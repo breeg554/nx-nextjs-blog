@@ -6,8 +6,7 @@ export function Index() {
   return (
     <div className={styles.page}>
       <h1>Hi! work in progress...</h1>
-      
-      <Button>Hej</Button>
+      <Button>KLIKAJ TUTAJ</Button>
     </div>
   );
 }

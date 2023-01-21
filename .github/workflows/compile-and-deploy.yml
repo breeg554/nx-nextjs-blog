@@ -1,0 +1,20 @@
+name: Compile, test and deploy vercel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  compile-and-test:
+    name: Compile and test
+    uses: breeg554/nx-nextjs-blogpost/.github/workflows/compile-and-test.yml@main
+
+  deploy-vercel:
+    name: Deploy vercel
+    needs:
+      - compile-and-test
+    if: needs.compile-and-test.result == 'success'
+    uses: breeg554/nx-nextjs-blogpost/.github/workflows/deploy-vercel.yml@main
+    secrets:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
