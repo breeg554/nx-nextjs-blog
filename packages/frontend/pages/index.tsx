@@ -1,10 +1,9 @@
-import styles from './index.module.css';
 import {Button} from "@blog/ui";
 
 
 export function Index() {
   return (
-    <div className={styles.page}>
+    <div className='bg-neutral-200'>
       <h1>Hi! work in progress...</h1>
       <Button>DZIALA?!</Button>
     </div>
