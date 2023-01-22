@@ -34,6 +34,7 @@ specifiers:
   axios: ^1.2.3
   babel-jest: 28.1.1
   babel-loader: 8.1.0
+  classnames: ^2.3.2
   eslint: ~8.15.0
   eslint-config-next: 13.1.1
   eslint-config-prettier: 8.1.0
@@ -67,6 +68,7 @@ dependencies:
   '@next/font': 13.1.4
   '@nrwl/next': 15.5.2_pxpxsspwa6cw2l2ifj4en6523a
   axios: 1.2.3
+  classnames: 2.3.2
   lodash.merge: 4.6.2
   next: 13.1.1_a7mipu7kvrstgwvi56qu2qyzhe
   next-seo: 5.15.0_q76c2b4vyoegvsbrcwkfvimnai
@@ -7802,6 +7804,10 @@ packages:
       isobject: 3.0.1
       static-extend: 0.1.2
     dev: true
+
+  /classnames/2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
+    dev: false
 
   /clean-css/4.2.4:
     resolution: {integrity: sha512-EJUDT7nDVFDvaQgAo2G/PJvxmp1o/c6iXLbswsBbUFXi1Nr+AjA2cKmfbKDMjMvzEe75g3P6JkaDDAKk96A85A==}
