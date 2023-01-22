@@ -5,6 +5,7 @@ specifiers:
   '@babel/preset-react': ^7.14.5
   '@babel/preset-typescript': 7.12.13
   '@babel/runtime': ^7.20.7
+  '@next/font': ^13.1.4
   '@nrwl/eslint-plugin-nx': 15.5.2
   '@nrwl/jest': 15.5.2
   '@nrwl/linter': 15.5.2
@@ -62,6 +63,7 @@ specifiers:
   url-loader: ^3.0.0
 
 dependencies:
+  '@next/font': 13.1.4
   '@nrwl/next': 15.5.2_pxpxsspwa6cw2l2ifj4en6523a
   axios: 1.2.3
   lodash.merge: 4.6.2
@@ -3037,6 +3039,10 @@ packages:
     dependencies:
       glob: 7.1.7
     dev: true
+
+  /@next/font/13.1.4:
+    resolution: {integrity: sha512-NfqQPAIFJhssdaZEsP0MADZKN+tc040jOkNKVlDZHtVjJWBJSgbe8UHg3w0S6YuQr7PHc0ACbFeVCBQeG4MEvg==}
+    dev: false
 
   /@next/swc-android-arm-eabi/13.1.1:
     resolution: {integrity: sha512-qnFCx1kT3JTWhWve4VkeWuZiyjG0b5T6J2iWuin74lORCupdrNukxkq9Pm+Z7PsatxuwVJMhjUoYz7H4cWzx2A==}

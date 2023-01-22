@@ -15,6 +15,7 @@
   },
   "private": true,
   "dependencies": {
+    "@next/font": "^13.1.4",
     "@nrwl/next": "15.5.2",
     "axios": "^1.2.3",
     "lodash.merge": "^4.6.2",

@@ -3,10 +3,8 @@ import { Head, Html, Main, NextScript } from 'next/document';
 export default function Document() {
   return (
     <Html>
-      <Head>
-        <title>Welcome to nx-nextjs-blogpost!</title>
-      </Head>
-      <body className="bg-neutral-100 dark:bg-neutral-800">
+      <Head />
+      <body className="bg-neutral-50 dark:bg-neutral-900">
         <Main />
         <NextScript />
       </body>
