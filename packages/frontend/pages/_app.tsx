@@ -3,6 +3,7 @@ import { AppProps } from 'next/app';
 import { ThemeProvider } from 'next-themes';
 
 import { Inter } from '@next/font/google';
+import { NextSeo } from '../modules/Seo';
 
 const _inter = Inter({
   weight: ['300', '400', '500', '700'],
@@ -12,6 +13,7 @@ const _inter = Inter({
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider attribute="class">
+      <NextSeo />
       <main>
         <Component {...pageProps} />
       </main>
