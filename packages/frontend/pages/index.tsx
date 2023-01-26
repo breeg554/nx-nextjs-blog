@@ -2,12 +2,18 @@ import { ThemeSwitch } from '../modules/Theme';
 import { PostApi } from '../modules/Api';
 import { useEffect } from 'react';
 import { Typography } from '@blog/ui';
+import { Post } from '../modules/Post';
 
 export function Index() {
-  const httpClient = new PostApi();
+  const fetchPosts = async () => {
+    const postApi = new PostApi();
+    const data = await postApi.getPosts();
 
+    const formatted = data.items.map(post => Post.fromResponsePostDTO(post));
+    console.log(formatted);
+  };
   useEffect(() => {
-    console.log(httpClient.getPosts());
+    fetchPosts();
   }, []);
   return (
     <div>

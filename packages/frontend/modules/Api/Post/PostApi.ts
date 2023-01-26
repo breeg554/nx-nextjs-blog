@@ -1,9 +1,10 @@
-import { HttpClient } from '@blog/http-client';
+import { ContentfulClient } from '../../Contentful';
+import { IResponsePostDTO } from '../../Post';
 
 export class PostApi {
-  constructor(private readonly client = new HttpClient()) {}
+  constructor(private readonly client = new ContentfulClient('iltqx28aclck')) {}
 
   async getPosts() {
-    return this.client.get('').then(_res => []);
+    return this.client.getEntries<IResponsePostDTO>({ content_type: 'blogPost' });
   }
 }
