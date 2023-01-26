@@ -1,10 +1,9 @@
 import '../styles/global.css';
 import { AppProps } from 'next/app';
-import { ThemeProvider } from 'next-themes';
-
 import { Inter } from '@next/font/google';
 import { NextSeo } from '../modules/Seo';
 import { RootLayout } from '../modules/Layout';
+import { AppProvider } from '../modules/AppProvider';
 
 const _inter = Inter({
   weight: ['300', '400', '500', '700'],
@@ -13,12 +12,12 @@ const _inter = Inter({
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class">
+    <AppProvider>
       <NextSeo />
       <RootLayout>
         <Component {...pageProps} />
       </RootLayout>
-    </ThemeProvider>
+    </AppProvider>
   );
 }
 
