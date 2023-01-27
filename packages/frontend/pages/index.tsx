@@ -1,20 +1,15 @@
 import { ThemeSwitch } from '../modules/Theme';
-import { PostApi } from '../modules/Api';
-import { useEffect } from 'react';
 import { Typography } from '@blog/ui';
-import { Post } from '../modules/Post';
+import { postKeys, usePostHooks } from '../modules/Post';
+import { QueryClient } from 'react-query';
+import { PostApi } from '../modules/Api';
+import { prepareState } from '../utils';
 
 export function Index() {
-  const fetchPosts = async () => {
-    const postApi = new PostApi();
-    const data = await postApi.getPosts();
+  const { usePostsQuery } = usePostHooks();
+  const { data } = usePostsQuery();
 
-    const formatted = data.items.map(post => Post.fromResponsePostDTO(post));
-    console.log(formatted);
-  };
-  useEffect(() => {
-    fetchPosts();
-  }, []);
+  console.log(data);
   return (
     <div>
       <Typography className="text-red-500 dark:text-blue-500">Hi! work in progress...</Typography>
@@ -24,3 +19,17 @@ export function Index() {
 }
 
 export default Index;
+
+export async function getServerSideProps() {
+  const dehydratedState = await prepareState(async (queryClient: QueryClient) => {
+    const postApi = new PostApi();
+
+    await queryClient.prefetchQuery(postKeys.all, () => postApi.getPosts());
+  });
+
+  return {
+    props: {
+      dehydratedState,
+    },
+  };
+}

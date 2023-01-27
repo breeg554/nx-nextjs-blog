@@ -12,7 +12,7 @@ const _inter = Inter({
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
-    <AppProvider>
+    <AppProvider dehydratedState={pageProps.dehydratedState}>
       <NextSeo />
       <RootLayout>
         <Component {...pageProps} />
