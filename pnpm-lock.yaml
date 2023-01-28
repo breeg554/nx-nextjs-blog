@@ -5,6 +5,8 @@ specifiers:
   '@babel/preset-react': ^7.14.5
   '@babel/preset-typescript': 7.12.13
   '@babel/runtime': ^7.20.7
+  '@contentful/rich-text-react-renderer': ^15.16.2
+  '@contentful/rich-text-types': ^16.0.2
   '@next/font': ^13.1.4
   '@nrwl/eslint-plugin-nx': 15.5.2
   '@nrwl/jest': 15.5.2
@@ -67,6 +69,7 @@ specifiers:
   url-loader: ^3.0.0
 
 dependencies:
+  '@contentful/rich-text-react-renderer': 15.16.2_biqbaboplfbrettd7655fr4n2y
   '@next/font': 13.1.4
   '@nrwl/next': 15.5.2_pxpxsspwa6cw2l2ifj4en6523a
   axios: 1.2.3
@@ -86,6 +89,7 @@ devDependencies:
   '@babel/preset-react': 7.18.6_@babel+core@7.12.13
   '@babel/preset-typescript': 7.12.13_@babel+core@7.12.13
   '@babel/runtime': 7.20.7
+  '@contentful/rich-text-types': 16.0.2
   '@nrwl/eslint-plugin-nx': 15.5.2_epi67o3td723uuoophu6yzasky
   '@nrwl/jest': 15.5.2_3q4ijp4gjlbszejurny6oyn6dy
   '@nrwl/linter': 15.5.2_glvgygzdl6z6vbcvhihl7qgwjm
@@ -2586,10 +2590,21 @@ packages:
     dev: true
     optional: true
 
+  /@contentful/rich-text-react-renderer/15.16.2_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-5UJxF+6DhcwkEsgJsHczJrCxveaQ95Oqj3NaJYmM9VDVKlvPK8cNXmSiWArHCEN0uw3yU/IS2sw16uIam3LsjQ==}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      react: ^16.8.6 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.6 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@contentful/rich-text-types': 16.0.2
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@contentful/rich-text-types/16.0.2:
     resolution: {integrity: sha512-ovbmCKQjlyGek4NuABoqDesC3FBV3e5jPMMdtT2mpOy9ia31MKO0NSFMRGZu7Q+veZzmDMja8S1i/XeFCUT9Pw==}
     engines: {node: '>=6.0.0'}
-    dev: false
 
   /@cspotcode/source-map-support/0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
