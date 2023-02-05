@@ -1,10 +1,10 @@
 import { ContentfulClient } from '../../Contentful';
-import { IResponsePostDTO } from '../../Post';
+import { IGetPostDto } from '@blog/contracts';
 
 export class PostApi {
   constructor(private readonly client = new ContentfulClient('iltqx28aclck')) {}
 
   async getPosts() {
-    return this.client.getEntries<IResponsePostDTO>({ content_type: 'blogPost' });
+    return this.client.getEntries<IGetPostDto>({ content_type: 'blogPost' });
   }
 }
