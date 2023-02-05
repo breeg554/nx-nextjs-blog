@@ -1,8 +1,8 @@
 import { Entry } from 'contentful';
-import { IResponseAuthorDTO } from './author.dto';
+import { IGetAuthorDto } from '@blog/contracts';
 
 export class Author {
-  public static fromResponseAuthorDTO(author: Entry<IResponseAuthorDTO>) {
+  public static fromResponseAuthorDTO(author: Entry<IGetAuthorDto>) {
     return new Author(
       author.sys.id,
       author.fields.name,

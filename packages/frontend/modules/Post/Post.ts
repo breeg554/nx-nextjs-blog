@@ -1,10 +1,10 @@
-import { IResponsePostDTO } from './post.dto';
 import { Entry, RichTextContent } from 'contentful';
+import { IGetPostDto } from '@blog/contracts';
 import { Author } from '../Author';
 import { Asset } from '../Asset';
 
 export class Post {
-  public static fromResponsePostDTO(post: Entry<IResponsePostDTO>) {
+  public static fromResponsePostDTO(post: Entry<IGetPostDto>) {
     return new Post(
       post.sys.id,
       post.fields.title,
